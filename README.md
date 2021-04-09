@@ -16,27 +16,11 @@ Download and install Ruby Version Manager (RVM):
 
     $ source /home/[username]/.rvm/scripts/rvm
 
-    $ $ rvm --version
+    $ rvm --version
     rvm 1.29.12 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
 
-Configure Ruby version
+Use latest Ruby version
     $ rvm list known
-    # MRI Rubies
-    [ruby-]1.8.6[-p420]
-    [ruby-]1.8.7[-head] # security released on head
-    [ruby-]1.9.1[-p431]
-    [ruby-]1.9.2[-p330]
-    [ruby-]1.9.3[-p551]
-    [ruby-]2.0.0[-p648]
-    [ruby-]2.1[.10]
-    [ruby-]2.2[.10]
-    [ruby-]2.3[.8]
-    [ruby-]2.4[.10]
-    [ruby-]2.5[.8]
-    [ruby-]2.6[.6]
-    [ruby-]2.7[.2]
-    [ruby-]3[.0.0]
-    ruby-head
 
     $ rvm --default use ruby-3.0.0
     Using /home/[user]/.rvm/gems/ruby-3.0.0
