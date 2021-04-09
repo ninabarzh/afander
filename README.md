@@ -4,7 +4,7 @@ Just for learning and having fun.
 
 ## Installation
 
-Download and install Ruby Version Manager (RVM):
+### Ruby Version Manager (RVM)
 
     $ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 
     gpg: key 105BD0E739499BDB: public key "Piotr Kuczynski <piotr.kuczynski@gmail.com>" imported
@@ -19,11 +19,16 @@ Download and install Ruby Version Manager (RVM):
     $ rvm --version
     rvm 1.29.12 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
 
+### Ruby version
+
 Use latest Ruby version
+
     $ rvm list known
 
     $ rvm --default use ruby-3.0.0
     Using /home/[user]/.rvm/gems/ruby-3.0.0
+
+### Node
 
 Install latest node
 
@@ -33,9 +38,13 @@ Install latest node
 
     $ node -v
 
+### Other dependencies
+
 If you don't have them already, you'll also have to install 
 
     $ sudo apt-get install gcc g++ make
+
+### Ruby gems
 
 Set up latest ruby gems
 
@@ -43,9 +52,48 @@ Set up latest ruby gems
 
     $ gem -v
 
+### Ruby on Rails
+
 Install [Ruby on Rails](https://rubygems.org/gems/rails/versions)
 
     $ gem install rails -v 6.1.3.1
 
     $ rails -v
 
+### Database
+
+Postgres:
+
+    $ sudo apt-get install postgresql postgresql-contrib libpq-dev -y
+
+    $ sudo systemctl start postgresql
+
+    $ sudo systemctl enable postgresql
+
+    $ dpkg --status postgresql
+
+Log in as sudo on PostgreSQL
+
+    $ sudo -u postgres psql
+
+Change the postgres password
+
+    postgress=# \password postgres
+
+Create role
+
+    postgress=# create role afander with createdb login password 'whateverpassword';
+
+Check
+
+    postgress=# \du
+
+Leave with Ctrl-Z
+
+### Rails application
+
+    $ rails new afander -d postgresql
+
+Correct the gemfile and
+
+    $ bundle install
