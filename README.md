@@ -1,6 +1,6 @@
 # Afander,  the Youngling
 
-Just for learning and having fun.
+Just for having fun learning and using locally for site analysis.
 
 ## Installation
 
