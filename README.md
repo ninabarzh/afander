@@ -3,7 +3,7 @@
 Just for having fun learning and using locally for internet site analyses.
 
 - [x] Yay! You're on Rails!
-- [ ] Now the crawler, indexer, query (ranking) and wiring into a search page.
+- [ ] Now the scraper and various analyses and wiring it all into a single page.
 
 ## Yay! You're on Rails!
 
