@@ -117,7 +117,7 @@ Create the database
     $ rails db:setup
     Created database 'afander_development'
     Created database 'afander_test'
-    /home/nina/Development/afander/db/schema.rb doesn't exist yet. Run `bin/rails db:migrate` to create it, then try again. If you do not intend to use a database, you should instead alter /home/nina/Development/afander/config/application.rb to limit the frameworks that will be loaded.
+    ...
 
 Migrate the database
 
