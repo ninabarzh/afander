@@ -2,7 +2,10 @@
 
 Just for having fun learning and using locally for site analysis.
 
-## Installation
+- [x] Yay! You're on Rails!
+- [ ] Now the crawler, indexer, query (ranking) and wiring.
+
+## Yay! You're on Rails!
 
 ### Install Ruby Version Manager (RVM)
 
@@ -145,7 +148,10 @@ Launch
 
     $ rails s -b localhost -p 8080
 
-Yay! You're on Rails!
+## Problems or Suggestions
 
-Now the crawler, indexer, query (ranking) and wiring.
- 
+[Open an issue here](https://github.com/tymyrddin/afander/issues)
+
+## Contributing
+
+This project welcomes contributions and suggestions.
