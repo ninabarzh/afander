@@ -4,7 +4,7 @@ Just for having fun learning and using locally for site analysis.
 
 ## Installation
 
-### Ruby Version Manager (RVM)
+### Install Ruby Version Manager (RVM)
 
     $ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 
     gpg: key 105BD0E739499BDB: public key "Piotr Kuczynski <piotr.kuczynski@gmail.com>" imported
@@ -19,18 +19,14 @@ Just for having fun learning and using locally for site analysis.
     $ rvm --version
     rvm 1.29.12 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
 
-### Ruby version
-
-Use latest Ruby version
+### Use latest Ruby version
 
     $ rvm list known
 
     $ rvm --default use ruby-3.0.0
     Using /home/[user]/.rvm/gems/ruby-3.0.0
 
-### Node
-
-Install latest node
+### Install latest node
 
     $ curl -sL https://deb.nodesource.com/setup_15.x | sudo bash -
 
@@ -38,21 +34,19 @@ Install latest node
 
     $ node -v
 
-### Other dependencies
+### Install other dependencies
 
 If you don't have them already, you'll also have to install 
 
     $ sudo apt-get install gcc g++ make
 
-### Ruby gems
-
-Set up latest ruby gems
+### Set up latest ruby gems
 
     $ gem update --system
 
     $ gem -v
 
-### Ruby on Rails
+### Install Ruby on Rails
 
 Install [Ruby on Rails](https://rubygems.org/gems/rails/versions)
 
@@ -60,7 +54,7 @@ Install [Ruby on Rails](https://rubygems.org/gems/rails/versions)
 
     $ rails -v
 
-### Database
+### Install database and create role
 
 Postgres:
 
@@ -90,10 +84,68 @@ Check
 
 Leave with Ctrl-Z
 
-### Rails application
+### Set up Rails application
 
     $ rails new afander -d postgresql
 
 Correct the gemfile and
 
     $ bundle install
+
+### Configure database
+
+In the config directory find file database.yml and configure development and test (two spaces in front of each line!)
+
+    development:
+      <<: *default
+      database: afander_development
+      username: afander
+      password: [whateverpasswordyouchose]
+      host: localhost
+      port: 5432
+
+    test:
+      <<: *default
+      database: afander_test
+      username: afander
+      password: [whateverpasswordyouchose]
+      host: localhost
+      port: 5432
+
+Create the database
+
+    $ rails db:setup
+    Created database 'afander_development'
+    Created database 'afander_test'
+    /home/nina/Development/afander/db/schema.rb doesn't exist yet. Run `bin/rails db:migrate` to create it, then try again. If you do not intend to use a database, you should instead alter /home/nina/Development/afander/config/application.rb to limit the frameworks that will be loaded.
+
+Migrate the database
+
+    $ rails db:migrate
+
+### Install yarn
+
+Install yarn if you don't already have it
+
+    $ curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+
+    $ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+
+    $ sudo apt-get update
+
+    $ sudo apt install --no-install-recommends yarn
+
+### Launch Puma Rails Web Server
+
+    $ rails webpacker:install
+
+And try to resolve all dependencies with yarn.
+
+Launch
+
+    $ rails s -b localhost -p 8080
+
+Yay! You're on Rails!
+
+Now the crawler, indexer, query (ranking) and wiring.
+ 
