@@ -1,9 +1,9 @@
 # Afander,  the Youngling
 
-Just for having fun learning and using locally for site analysis.
+Just for having fun learning and using locally for internet site analyses.
 
 - [x] Yay! You're on Rails!
-- [ ] Now the crawler, indexer, query (ranking) and wiring.
+- [ ] Now the crawler, indexer, query (ranking) and wiring into a search page.
 
 ## Yay! You're on Rails!
 
