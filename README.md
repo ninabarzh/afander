@@ -204,6 +204,10 @@ Chrome
 
     $ sudo unzip chromedriver_linux64.zip -d /usr/local/bin
 
+    $ sudo chown root:root /usr/local/bin/chromedriver
+
+    $ sudo chmod +x /usr/local/bin/chromedriver
+
 Phantom
 
     $ sudo apt install -q -y chrpath libxft-dev libfreetype6 libfreetype6-dev libfontconfig1 libfontconfig1-dev
