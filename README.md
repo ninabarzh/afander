@@ -180,6 +180,10 @@ Install x virtual framebuffer. It performs all graphical operations in virtual m
 
     $ sudo apt install -q -y xvfb
 
+[Selenium](https://www.selenium.dev/documentation/en/):
+
+    § gem install selenium-webdriver
+
 If not have yet, install chrome, firefox and phantom with drivers. Check and install the driver versions needed for [firefox](https://github.com/mozilla/geckodriver/releases/) and for [chrome](https://sites.google.com/a/chromium.org/chromedriver/downloads) (in my case version 89). For firefox I just used the latest geckodriver. All versions located here http://phantomjs.org/download.html
 
 Firefox
